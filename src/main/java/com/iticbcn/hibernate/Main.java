@@ -54,12 +54,14 @@ public class Main {
                 }
 
             } catch (HibernateException hbe) {
-
                 System.err.println("Error amb la sessió: "+hbe.getMessage());
-            
+                hbe.printStackTrace();
+                throw hbe;     
             }
         } catch (HibernateException hbe) {
             System.err.println("Error inicialitzant Hibernate: "+hbe.getMessage());
+            hbe.printStackTrace();
+            throw hbe;
         } 
     }
 }
