@@ -26,13 +26,12 @@ public class Empleats implements Serializable {
 
     @OneToOne(cascade=CascadeType.ALL)   
     @JoinColumn(name="despatx",
-    referencedColumnName="idDespatx",updatable=false)
+    referencedColumnName="off_no",updatable=false)
     private Despatx despatx;
 
     public Empleats() {}
 
-    public Empleats(int numeroEmpleat, String nomEmpleat, Despatx despatx) {
-        this.numeroEmpleat = numeroEmpleat;
+    public Empleats(String nomEmpleat, Despatx despatx) {
         this.nomEmpleat = nomEmpleat;
         this.despatx = despatx;
     }
