@@ -24,7 +24,7 @@ public class Main {
                     
                     session.persist(e1);
                     
-                    session.getTransaction().commit(); // Confirma la transacción solo si todo está bien
+                    session.getTransaction().commit(); 
 
                 } catch (ConstraintViolationException cve) {
                     System.err.println("Error de restricció de base de dades: " + cve.getMessage());
